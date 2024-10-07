@@ -2,8 +2,12 @@ import React, { useEffect } from 'react';
 import carPng from '../../assets/car.png';
 import yellowCar from '../../assets/banner-car.png';
 import AOS from 'aos';
+import { useContext } from 'react';
+import {UserContext} from '../../App.js'
 
 const Hero = ({ theme }) => {
+  const user = useContext(UserContext)
+  console.log('her0', user)
   useEffect(() => {
     AOS.refresh();
   });
@@ -32,7 +36,7 @@ const Hero = ({ theme }) => {
               data-aos-delay="600"
               className="text-5xl lg:text-7xl font-semibold font-serif"
             >
-              Car Rental
+              Car Rentals 
             </h1>
             <p data-aos="fade-up" data-aos-delay="1000">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
